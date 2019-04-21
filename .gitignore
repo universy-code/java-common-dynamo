@@ -1,0 +1,13 @@
+*.class
+.gradle
+.idea/**
+**.iml
+/build/
+/bin/
+/.settings/
+.project
+.classpath
+
+# Serverless directories
+.serverless
+
