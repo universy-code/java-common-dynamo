@@ -6,19 +6,10 @@ import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.client.builder.AwsClientBuilder;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
+import com.universy.common.dynamo.environment.DynamoEnvironment;
 
 public class DynamoDBLocalAccess extends DynamoDBAccess {
 
-    private final String endpoint;
-    private final String accessKey;
-    private final String secretKey;
-
-    public DynamoDBLocalAccess(String stage, String region, String endpoint, String accessKey, String secretKey) {
-        super(stage, region);
-        this.endpoint = endpoint;
-        this.accessKey = accessKey;
-        this.secretKey = secretKey;
-    }
 
     @Override
     protected AmazonDynamoDB getClient() {
@@ -35,11 +26,11 @@ public class DynamoDBLocalAccess extends DynamoDBAccess {
 
     private AWSCredentialsProvider getCredentials() {
         return new AWSStaticCredentialsProvider(
-                new BasicAWSCredentials(accessKey, secretKey));
+                new BasicAWSCredentials(DynamoEnvironment.getAccessKeyId(), DynamoEnvironment.getSecretAccessKey()));
     }
 
     private AwsClientBuilder.EndpointConfiguration getEndpointConfiguration() {
         return new AwsClientBuilder
-                .EndpointConfiguration(endpoint, getRegion());
+                .EndpointConfiguration(DynamoEnvironment.getDynamoEndpoint(), DynamoEnvironment.getRegion());
     }
 }

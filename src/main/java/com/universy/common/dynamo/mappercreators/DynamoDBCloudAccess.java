@@ -3,12 +3,9 @@ package com.universy.common.dynamo.mappercreators;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
+import com.universy.common.dynamo.environment.DynamoEnvironment;
 
 public class DynamoDBCloudAccess extends DynamoDBAccess {
-
-    public DynamoDBCloudAccess(String stage, String region) {
-        super(stage, region);
-    }
 
     @Override
     protected AmazonDynamoDB getClient() {
@@ -17,7 +14,7 @@ public class DynamoDBCloudAccess extends DynamoDBAccess {
 
     private AmazonDynamoDB getCloudClient() {
         return AmazonDynamoDBClientBuilder.standard()
-                .withRegion(Regions.fromName(getRegion()))
+                .withRegion(Regions.fromName(DynamoEnvironment.getRegion()))
                 .build();
     }
 }

@@ -3,30 +3,16 @@ package com.universy.common.dynamo.mappercreators;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapperConfig;
+import com.universy.common.dynamo.environment.DynamoEnvironment;
 
 public abstract class DynamoDBAccess {
 
-    private final String stage;
-    private final String region;
-
-    public DynamoDBAccess(String stage, String region) {
-        this.stage = stage;
-        this.region = region;
-    }
 
     public DynamoDBMapper getDynamoDBMapper(){
         return new DynamoDBMapper(getClient(), dynamoDBMapperConfig());
     }
 
     protected abstract AmazonDynamoDB getClient();
-
-    public String getStage() {
-        return stage;
-    }
-
-    public String getRegion() {
-        return region;
-    }
 
     public DynamoDBMapperConfig dynamoDBMapperConfig() {
         DynamoDBMapperConfig.Builder builder = DynamoDBMapperConfig.builder();
@@ -35,6 +21,6 @@ public abstract class DynamoDBAccess {
     }
 
     private String getFormattedPrefix(){
-        return String.format("%s-", stage);
+        return String.format("%s-", DynamoEnvironment.getStage());
     }
 }
