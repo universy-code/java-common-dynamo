@@ -1,4 +1,4 @@
-package com.universy.common.dynamo;
+package com.universy.common.dynamo.mappercreators;
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
@@ -37,6 +37,4 @@ public abstract class DynamoDBAccess {
     private String getFormattedPrefix(){
         return String.format("%s-", stage);
     }
-
-
 }

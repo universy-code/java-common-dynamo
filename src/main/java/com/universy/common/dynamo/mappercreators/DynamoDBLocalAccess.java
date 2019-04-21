@@ -1,4 +1,4 @@
-package com.universy.common.dynamo;
+package com.universy.common.dynamo.mappercreators;
 
 import com.amazonaws.auth.AWSCredentialsProvider;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;

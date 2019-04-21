@@ -1,4 +1,4 @@
-package com.universy.common.dynamo;
+package com.universy.common.dynamo.mappercreators;
 
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
