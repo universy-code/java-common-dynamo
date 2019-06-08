@@ -1,4 +1,4 @@
-package com.universy.common.dynamo.environment.exceptions;
+package com.universy.dynamo.environment.exceptions;
 
 public class CorruptDynamoEnvironmentSetUpException extends IllegalStateException {
 }

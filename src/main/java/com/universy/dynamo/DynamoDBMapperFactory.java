@@ -1,10 +1,10 @@
-package com.universy.common.dynamo;
+package com.universy.dynamo;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
-import com.universy.common.dynamo.environment.DynamoEnvironment;
-import com.universy.common.dynamo.mappercreators.DynamoDBAccess;
-import com.universy.common.dynamo.mappercreators.DynamoDBCloudAccess;
-import com.universy.common.dynamo.mappercreators.DynamoDBLocalAccess;
+import com.universy.dynamo.environment.DynamoEnvironment;
+import com.universy.dynamo.mappercreators.DynamoDBAccess;
+import com.universy.dynamo.mappercreators.DynamoDBCloudAccess;
+import com.universy.dynamo.mappercreators.DynamoDBLocalAccess;
 
 public class DynamoDBMapperFactory {
 

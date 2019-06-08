@@ -1,9 +1,9 @@
-package com.universy.common.dynamo.mappercreators;
+package com.universy.dynamo.mappercreators;
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapperConfig;
-import com.universy.common.dynamo.environment.DynamoEnvironment;
+import com.universy.dynamo.environment.DynamoEnvironment;
 
 public abstract class DynamoDBAccess {
 

@@ -1,6 +1,6 @@
-# Universy Common Dynamo
+# Universy Dynamo Client
 
-## Proyecto de clases utiles para el manejo de DynamoDB.
+## Proyecto de clases para el manejo de DynamoDB.
 
 ### Para compilar. 
 

@@ -1,7 +1,7 @@
-package com.universy.common.dynamo.environment;
+package com.universy.dynamo.environment;
 
 
-import com.universy.common.dynamo.environment.exceptions.CorruptDynamoEnvironmentSetUpException;
+import com.universy.dynamo.environment.exceptions.CorruptDynamoEnvironmentSetUpException;
 
 import java.util.Optional;
 

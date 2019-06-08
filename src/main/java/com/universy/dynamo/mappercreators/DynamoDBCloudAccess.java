@@ -1,9 +1,9 @@
-package com.universy.common.dynamo.mappercreators;
+package com.universy.dynamo.mappercreators;
 
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
-import com.universy.common.dynamo.environment.DynamoEnvironment;
+import com.universy.dynamo.environment.DynamoEnvironment;
 
 public class DynamoDBCloudAccess extends DynamoDBAccess {
 
